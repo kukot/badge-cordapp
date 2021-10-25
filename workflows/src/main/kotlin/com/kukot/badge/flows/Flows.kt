@@ -1,4 +1,4 @@
-package com.template.flows
+package com.kukot.badge.flows
 
 import co.paralleluniverse.fibers.Suspendable
 import net.corda.core.flows.*
@@ -15,11 +15,11 @@ import net.corda.core.flows.FlowSession
 
 import net.corda.core.identity.Party
 
-import com.template.contracts.TemplateContract
+import com.kukot.badge.contracts.TemplateContract
 
 import net.corda.core.transactions.TransactionBuilder
 
-import com.template.states.TemplateState
+import com.kukot.badge.states.TemplateState
 import net.corda.core.contracts.requireThat
 import net.corda.core.identity.AbstractParty
 

@@ -1,6 +1,6 @@
-package com.template.contracts
+package com.kukot.badge.contracts
 
-import com.template.states.TemplateState
+import com.kukot.badge.states.TemplateState
 import org.junit.Test
 import kotlin.test.assertEquals
 

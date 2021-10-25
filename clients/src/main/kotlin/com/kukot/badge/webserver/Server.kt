@@ -1,4 +1,4 @@
-package com.template.webserver
+package com.kukot.badge.webserver
 
 import org.springframework.boot.Banner
 import org.springframework.boot.SpringApplication

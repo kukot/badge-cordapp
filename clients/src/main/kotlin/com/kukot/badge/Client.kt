@@ -1,4 +1,4 @@
-package com.template
+package com.kukot.badge
 
 import net.corda.client.rpc.CordaRPCClient
 import net.corda.core.utilities.NetworkHostAndPort.Companion.parse
@@ -37,7 +37,7 @@ private class Client {
         println("\n-- Here is the node info of the node that the client connected to --")
         logger.info("{}", me)
 
-        //Close the client connection
+        // Close the client connection
         clientConnection.close()
     }
 }

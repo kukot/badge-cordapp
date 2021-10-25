@@ -1,4 +1,4 @@
-package com.template.webserver
+package com.kukot.badge.webserver
 
 import net.corda.client.rpc.CordaRPCClient
 import net.corda.client.rpc.CordaRPCConnection
@@ -27,10 +27,11 @@ private const val CORDA_RPC_PORT = "config.rpc.port"
  */
 @Component
 open class NodeRPCConnection(
-        @Value("\${$CORDA_NODE_HOST}") private val host: String,
-        @Value("\${$CORDA_USER_NAME}") private val username: String,
-        @Value("\${$CORDA_USER_PASSWORD}") private val password: String,
-        @Value("\${$CORDA_RPC_PORT}") private val rpcPort: Int): AutoCloseable {
+    @Value("\${$CORDA_NODE_HOST}") private val host: String,
+    @Value("\${$CORDA_USER_NAME}") private val username: String,
+    @Value("\${$CORDA_USER_PASSWORD}") private val password: String,
+    @Value("\${$CORDA_RPC_PORT}") private val rpcPort: Int
+) : AutoCloseable {
 
     lateinit var rpcConnection: CordaRPCConnection
         private set
@@ -39,10 +40,10 @@ open class NodeRPCConnection(
 
     @PostConstruct
     fun initialiseNodeRPCConnection() {
-            val rpcAddress = NetworkHostAndPort(host, rpcPort)
-            val rpcClient = CordaRPCClient(rpcAddress)
-            val rpcConnection = rpcClient.start(username, password)
-            proxy = rpcConnection.proxy
+        val rpcAddress = NetworkHostAndPort(host, rpcPort)
+        val rpcClient = CordaRPCClient(rpcAddress)
+        val rpcConnection = rpcClient.start(username, password)
+        proxy = rpcConnection.proxy
     }
 
     @PreDestroy

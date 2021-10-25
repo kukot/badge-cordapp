@@ -1,14 +1,14 @@
-package com.template
+package com.kukot.badge
 
 import net.corda.testing.node.*
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import com.template.states.TemplateState
+import com.kukot.badge.states.TemplateState
 import java.util.concurrent.Future;
 import net.corda.core.node.services.vault.QueryCriteria
 import net.corda.core.transactions.SignedTransaction
-import com.template.flows.Initiator
+import com.kukot.badge.flows.Initiator
 import net.corda.core.node.services.Vault.StateStatus
 
 
